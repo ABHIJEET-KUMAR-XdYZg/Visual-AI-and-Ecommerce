@@ -25,7 +25,8 @@ Our project aims to revolutionize the shopping experience by integrating a produ
 
 This is the main screen of the Amazon Prime website, displaying multiple movies. Users can select different language sections to watch movies and web series in their preferred languages.
 
-**[Watch the Main Screen Video](https://drive.google.com/file/d/175chanAfAWN2clhqrL2-nEek_3Fz59C5/view?usp=sharing)**
+https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/133910196/9662c5f4-8759-4b65-9513-9422a74233fe
+
 
 ### Product Identification and Purchase
 
