@@ -32,7 +32,11 @@ https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/133910196
 
 This video demonstrates how a customer spots a blazer and wants to get it easily while enjoying the series. Using the extended X-Ray feature, the blazer and other items are displayed, and users can be redirected to the product on Amazon for purchase.
 
-**[Watch the Product Identification Video](https://drive.google.com/file/d/1TF8dVmHLTbo6ZMVbEQ4Sska7P-pLHe2t/view?usp=sharing)**
+
+
+https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/133910196/298a5ca4-d072-4c93-94d1-0d99431d8d72
+
+
 
 ### Wishlist Feature
 
