@@ -53,6 +53,10 @@ https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/162783768
 
 There is also a wishlist button on the main screen, which allows users to view the items they have wishlisted from different movies or web series. Users can visit Amazon to buy these items at their convenience or remove items they no longer want.
 
+
+https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/150340995/4947222b-7e85-42dd-b8ff-d33170696e09
+
+
 **[Watch the Wishlist Button Video](https://drive.google.com/file/d/1ySwLnF4mUxX__zYnzhacfbELOamBz_2e/view?usp=sharing)**
 
 ## Tech Stacks
