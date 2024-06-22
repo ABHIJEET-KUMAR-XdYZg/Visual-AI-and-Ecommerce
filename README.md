@@ -34,7 +34,11 @@ This video demonstrates how a customer spots a blazer and wants to get it easily
 
 
 
-https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/133910196/298a5ca4-d072-4c93-94d1-0d99431d8d72
+
+https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/150340995/4e412e41-a7bc-41ad-a6a9-7705ea474f2f
+
+
+
 
 
 
