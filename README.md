@@ -25,25 +25,25 @@ Our project aims to revolutionize the shopping experience by integrating a produ
 
 This is the main screen of the Amazon Prime website, displaying multiple movies. Users can select different language sections to watch movies and web series in their preferred languages.
 
-**[Watch the Main Screen Video]([https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID](https://drive.google.com/file/d/175chanAfAWN2clhqrL2-nEek_3Fz59C5/view?usp=sharing))**
+**[Watch the Main Screen Video](https://drive.google.com/file/d/175chanAfAWN2clhqrL2-nEek_3Fz59C5/view?usp=sharing)**
 
 ### Product Identification and Purchase
 
 This video demonstrates how a customer spots a blazer and wants to get it easily while enjoying the series. Using the extended X-Ray feature, the blazer and other items are displayed, and users can be redirected to the product on Amazon for purchase.
 
-**[Watch the Product Identification Video]([https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID](https://drive.google.com/file/d/1TF8dVmHLTbo6ZMVbEQ4Sska7P-pLHe2t/view?usp=sharing))**
+**[Watch the Product Identification Video](https://drive.google.com/file/d/1TF8dVmHLTbo6ZMVbEQ4Sska7P-pLHe2t/view?usp=sharing)**
 
 ### Wishlist Feature
 
 We also offer a wishlisting feature, allowing users to easily add relevant items to their wishlist within Amazon Prime without interrupting their entertainment to visit Amazon.
 
-**[Watch the Wishlist Feature Video]([https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID](https://drive.google.com/file/d/1EgJ8HtC4JsL7jmlUUxaERMVZe7pTwa_1/view?usp=sharing))**
+**[Watch the Wishlist Feature Video](https://drive.google.com/file/d/1EgJ8HtC4JsL7jmlUUxaERMVZe7pTwa_1/view?usp=sharing)**
 
 ### Wishlist Button
 
 There is also a wishlist button on the main screen, which allows users to view the items they have wishlisted from different movies or web series. Users can visit Amazon to buy these items at their convenience or remove items they no longer want.
 
-**[Watch the Wishlist Button Video]([https://drive.google.com/uc?export=download&id=YOUR_VIDEO_ID](https://drive.google.com/file/d/1ySwLnF4mUxX__zYnzhacfbELOamBz_2e/view?usp=sharing))**
+**[Watch the Wishlist Button Video](https://drive.google.com/file/d/1ySwLnF4mUxX__zYnzhacfbELOamBz_2e/view?usp=sharing)**
 
 ## Tech Stacks
 
