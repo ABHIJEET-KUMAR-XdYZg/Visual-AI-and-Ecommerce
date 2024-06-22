@@ -42,7 +42,12 @@ https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/133910196
 
 We also offer a wishlisting feature, allowing users to easily add relevant items to their wishlist within Amazon Prime without interrupting their entertainment to visit Amazon.
 
+
 **[Watch the Wishlist Feature Video](https://drive.google.com/file/d/1EgJ8HtC4JsL7jmlUUxaERMVZe7pTwa_1/view?usp=sharing)**
+
+
+https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/162783768/03d6b4d3-0bd8-47d1-8fad-5d295f5d2d92
+
 
 ### Wishlist Button
 
