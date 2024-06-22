@@ -2,6 +2,10 @@
 
 Our project aims to revolutionize the shopping experience by integrating a product identification and wishlist feature into Amazon Prime Video, transforming how consumers interact with media and shop online. This innovative solution addresses the challenges faced by consumers who want to seamlessly purchase items seen in movies or web series, enhancing both convenience and satisfaction.
 
+
+https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/133910196/ef2b6f3b-d50d-497d-90e4-766fe53156ae
+
+
 ## Key Objectives
 
 - **Scene-Based Product Identification and Search:** Allows users to effortlessly identify and search for products featured in ongoing scenes, then redirects them to Amazon to view and purchase the exact or similar items.
