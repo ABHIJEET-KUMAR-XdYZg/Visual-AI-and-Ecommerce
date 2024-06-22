@@ -37,7 +37,7 @@ This video demonstrates how a customer spots a blazer and wants to get it easily
 
 We also offer a wishlisting feature, allowing users to easily add relevant items to their wishlist within Amazon Prime without interrupting their entertainment to visit Amazon.
 
-**[Watch the Wishlist Feature Video](https://drive.google.com/file/d/1EgJ8HtC4JsL7jmlUUxaERMVZe7pTwa_1/view?usp=sharing)**
+[![Watch the Wishlist Feature Video](https://drive.google.com/file/d/1EgJ8HtC4JsL7jmlUUxaERMVZe7pTwa_1/view?usp=sharing)](https://drive.google.com/file/d/1EgJ8HtC4JsL7jmlUUxaERMVZe7pTwa_1/view?usp=sharing)
 
 ### Wishlist Button
 
