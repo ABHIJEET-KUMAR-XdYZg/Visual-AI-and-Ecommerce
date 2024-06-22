@@ -1,0 +1,11 @@
+Name: Wristwatch, Confidence: 59.73, Relative Area: 0.00, File: imgs\Wristwatch_59.73_1040_709.png
+Name: Suit, Confidence: 86.10, Relative Area: 0.11, File: imgs\Suit_86.10_798_632.png
+Name: Shoe, Confidence: 43.62, Relative Area: 0.00, File: imgs\Shoe_43.62_1035_708.png
+Name: Shirt, Confidence: 49.25, Relative Area: 0.08, File: imgs\Shirt_49.25_728_251.png
+Name: Refrigerator, Confidence: 41.08, Relative Area: 0.04, File: imgs\Refrigerator_41.08_1399_637.png
+Name: Pants, Confidence: 48.32, Relative Area: 0.12, File: imgs\Pants_48.32_792_561.png
+Name: Necklace, Confidence: 37.95, Relative Area: 0.00, File: imgs\Necklace_37.95_502_669.png
+Name: Jacket, Confidence: 50.76, Relative Area: 0.09, File: imgs\Jacket_50.76_728_254.png
+Name: Earring, Confidence: 37.52, Relative Area: 0.00, File: imgs\Earring_37.52_492_538.png
+Name: Chair, Confidence: 44.03, Relative Area: 0.11, File: imgs\Chair_44.03_713_532.png
+Name: Bench, Confidence: 40.59, Relative Area: 0.03, File: imgs\Bench_40.59_0_519.png

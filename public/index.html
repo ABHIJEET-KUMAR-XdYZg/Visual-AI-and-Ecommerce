@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Video | Watch movies</title>
+    <link rel="shortcut icon" type="image/x-icon" href="icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #000000 !important;
+      }
+      .navbar-dark.bg-dark {
+        background-color: #000000 !important;
+      }
+      .nav-link {
+        font-weight: bold;
+      }
+      .navbar-nav .nav-item {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .navbar-icons .nav-link {
+        padding: 0.5rem 1rem;
+      }
+      .play-info {
+        display: flex;
+        align-items: center;
+      }
+      .play-info svg {
+        margin-right: 8px;
+      }
+      .card-hover:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+      aria-label="Tenth navbar example"
+      style="margin: 0; padding: 0"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample08"
+          aria-controls="navbarsExample08"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-md-center"
+          id="navbarsExample08"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >prime video</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: white"
+                >Home</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="#">Movies</a></li>
+                <li><a class="dropdown-item" href="#">TV shows</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: lightgray"
+                >Store</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="#">Rent</a></li>
+                <li><a class="dropdown-item" href="#">Channels</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                style="color: lightgray"
+                >Live TV</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                style="color: lightgray"
+                >Categories</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="color: lightgray"
+                >My Stuff</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="#">Watchlist</a></li>
+                <li><a class="dropdown-item" href="#">Rentals</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fas fa-search" style="color: lightgray"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fas fa-user-shield" style="color: lightgray"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                onclick="showWishlist()"
+                style="color: lightgray"
+              >
+                Wishlist
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+        ></li>
+        <li
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+        ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="carousel1.png" alt="First slide" />
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="carousel2.png" alt="Second slide" />
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="carousel3.png" alt="Third slide" />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <div class="album py-5" style="background-color: #000000">
+      <div class="container">
+        <div class="row mb-2">
+          <h4 style="color: white; font-size: 20px">
+            <span style="color: lightskyblue">Prime</span> TV shows we think
+            you'll like
+          </h4>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div
+              class="card shadow-sm card-hover"
+              style="background-color: #000000"
+              onclick="playVideo('jamnapaar.mp4')"
+            >
+              <img src="jamnapaar.png" alt="" />
+              <div class="card-body" style="color: white">
+                <div class="d-flex justify-content-start align-items-center">
+                  <svg
+                    fill="#fff"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    width="48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0h48v48H0z" fill="none" />
+                    <path
+                      d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm-4 29V15l12 9-12 9z"
+                    />
+                  </svg>
+                  <p style="margin-top: 10px; margin-left: 10px">Play S1 E1</p>
+                </div>
+                <div>
+                  <p>Jamnapaar</p>
+                  <p>
+                    2024
+                    U/A 16+
+                    Season 1・A coming of age journey of Shantanu Bansal (aka Shanky)...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card shadow-sm card-hover"
+              style="background-color: #000000"
+              onclick="playVideo('familyman.mp4')"
+            >
+              <img src="familyman.png" alt="" />
+              <div class="card-body" style="color: white">
+                <div class="d-flex justify-content-start align-items-center">
+                  <svg
+                    fill="#fff"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    width="48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0h48v48H0z" fill="none" />
+                    <path
+                      d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm-4 29V15l12 9-12 9z"
+                    />
+                  </svg>
+                  <p style="margin-top: 10px; margin-left: 10px">Play S1 E1</p>
+                </div>
+                <div>
+                  <p>The Family Man</p>
+                  <p>
+                    2019 A Season 1・The Family Man is an edgy action-drama
+                    series, which tells the story of...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              class="card shadow-sm card-hover"
+              style="background-color: #000000"
+              onclick="playVideo('farzi.mp4')"
+            >
+              <img src="farzi.png" alt="" />
+              <div class="card-body" style="color: white">
+                <div class="d-flex justify-content-start align-items-center">
+                  <svg
+                    fill="#fff"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    width="48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0h48v48H0z" fill="none" />
+                    <path
+                      d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm-4 29V15l12 9-12 9z"
+                    />
+                  </svg>
+                  <p style="margin-top: 10px; margin-left: 10px">Play S1 E1</p>
+                </div>
+                <div>
+                  <p>Farzi</p>
+                  <p>
+                    2023 A #5 in India Season 1・Sunny, a brilliant small-time
+                    artist is catapulted into...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-2 mt-3">
+          <h4 style="color: white; font-size: 20px">
+            <span style="color: lightskyblue">Prime</span> Watch in Your
+            Language
+          </h4>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm" style="background-color: #000000">
+              <img src="hindi.png" alt="" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm" style="background-color: #000000">
+              <img src="english.png" alt="" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm" style="background-color: #000000">
+              <img src="telugu.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="wishlistModal"
+      tabindex="-1"
+      aria-labelledby="wishlistModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="wishlistModalLabel">Wishlist</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="wishlistItems">
+            <!-- Wishlist items will be dynamically added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function playVideo(videoFile) {
+        window.location.href = `videoplay.html?video=${videoFile}`;
+      }
+      function showWishlist() {
+        fetch("/wishlist-items")
+          .then((response) => response.json())
+          .then((data) => {
+            const wishlistItems = document.getElementById("wishlistItems");
+            wishlistItems.innerHTML = ""; // Clear previous items
+
+            data.forEach((item) => {
+              const card = document.createElement("div");
+              card.className = "card mb-3";
+              card.id = item.id; // Set id to productId (sheet name)
+              card.innerHTML = `
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="${item.Product_Image_link}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">${item.Product_Name}</h5>
+                <p class="card-text">Price: ${item.Product_Price}</p>
+                <a href="${item.Product_link}" class="btn btn-primary" target="_blank">Go to Product</a>
+              </div>
+            </div>
+            <div class="col-md-2 d-flex align-items-center justify-content-end">
+              <button class="btn" style="background-color: transparent; border: none;" onclick="removeFromWishlist('${item.id}', this)">
+                <i class="fas fa-heart" style="color: red;"></i>
+              </button>
+            </div>
+          </div>
+        `;
+              wishlistItems.appendChild(card);
+            });
+
+            // Show the modal
+            const wishlistModal = new bootstrap.Modal(
+              document.getElementById("wishlistModal")
+            );
+            wishlistModal.show();
+          })
+          .catch((error) =>
+            console.error("Error fetching wishlist items:", error)
+          );
+      }
+
+      function removeFromWishlist(productId, iconElement) {
+        fetch(`/remove-from-wishlist?productId=${productId}`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to remove item from wishlist");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            if (data.success) {
+              iconElement.classList.remove("fas", "fa-heart"); // Remove initial heart icon classes
+              iconElement.innerHTML = "❤️"; // Replace with red heart emoji
+              iconElement.style.color = "red"; // Set color to red
+              document.getElementById(productId).remove(); // Remove the card from DOM
+            } else {
+              console.error("Failed to remove from wishlist:", data.error);
+            }
+          })
+          .catch((error) => {
+            console.error("Error removing item from wishlist:", error);
+          });
+      }
+    </script>
+  </body>
+</html>

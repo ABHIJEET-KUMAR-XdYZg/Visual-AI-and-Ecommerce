@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Video | Watch movies</title>
+    <link rel="shortcut icon" type="image/x-icon" href="icon.png" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #captureButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+      }
+      #captureButton:hover {
+        background-color: #3e8de3;
+        transform: scale(1.1); /* Increase size slightly */
+      }
+      #captureButton.loading {
+        background-color: #3e8de3;
+        transform: scale(1.1); /* Increase size slightly */
+      }
+      #captureButton .loader {
+        border: 4px solid #f3f3f3; /* Light grey */
+        border-top: 4px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      #products {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 300px;
+        max-height: 80vh;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 5px;
+        z-index: 10;
+        overflow-y: auto;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .product {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+      .product img {
+        max-width: 100px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+      .product a {
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        flex-grow: 1;
+      }
+      .wishlist-icon {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="captureButton">Shop Scene</button>
+    <div id="products"></div>
+    <video id="videoPlayer" controls autoplay>
+      <source id="videoSource" src="" type="video/mp4" />
+    </video>
+    <script>
+      function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      const videoFile = getQueryParam("video");
+      const videoSource = document.getElementById("videoSource");
+      videoSource.src = `/video?video=${videoFile}`;
+      document.getElementById("videoPlayer").load();
+
+      let isProductsVisible = false;
+
+      document.getElementById("captureButton").addEventListener("click", function () {
+        const productsDiv = document.getElementById("products");
+        const captureButton = document.getElementById("captureButton");
+        if (isProductsVisible) {
+          productsDiv.style.display = "none";
+          isProductsVisible = false;
+          captureButton.textContent = "Capture Frame";
+          captureButton.classList.remove("loading");
+        } else {
+          captureFrame();
+        }
+      });
+
+      function captureFrame() {
+        const video = document.getElementById("videoPlayer");
+        const canvas = document.createElement("canvas");
+        const captureButton = document.getElementById("captureButton");
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        captureButton.classList.add("loading");
+        captureButton.innerHTML = '<div class="loader"></div>';
+        canvas.toBlob(function (blob) {
+          const formData = new FormData();
+          formData.append("frame", blob, "frame.png");
+          fetch("/save-frame", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Frame saved:", data);
+              displayProducts(data.products);
+              captureButton.innerHTML = "✖";
+              captureButton.classList.remove("loading");
+            })
+            .catch((error) => {
+              console.error("Error saving frame:", error);
+              captureButton.textContent = "Capture Frame";
+              captureButton.classList.remove("loading");
+            });
+        }, "image/png");
+      }
+
+      function displayProducts(products) {
+        const productsDiv = document.getElementById("products");
+        productsDiv.innerHTML = "";
+        productsDiv.style.display = "block";
+        isProductsVisible = true;
+        products.forEach((product) => {
+          const productDiv = document.createElement("div");
+          productDiv.className = "product";
+          productDiv.setAttribute("data-product-id", product.Product_ID); // Store sheet name as attribute
+          const img = document.createElement("img");
+          img.src = product.Product_Image_link;
+          const a = document.createElement("a");
+          a.href = product.Product_link;
+          a.textContent = product.Product_Name;
+
+          const wishlistIcon = document.createElement("span");
+          wishlistIcon.className = "wishlist-icon";
+          wishlistIcon.innerHTML = "♡"; // Unicode character for white heart
+          wishlistIcon.style.color = "white";
+
+          wishlistIcon.addEventListener("click", () =>
+            toggleWishlist(product.Product_ID, wishlistIcon)
+          );
+
+          productDiv.appendChild(img);
+          productDiv.appendChild(a);
+          productDiv.appendChild(wishlistIcon);
+          productsDiv.appendChild(productDiv);
+        });
+      }
+
+      function addToWishlist(productId, iconElement) {
+        fetch("/wishlist/add", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ productId }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              iconElement.innerHTML = "❤"; // Unicode character for red heart
+              iconElement.style.color = "red";
+            } else {
+              console.error("Failed to add to wishlist");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      function removeFromWishlist(productId, iconElement) {
+        fetch(`/remove-from-wishlist?productId=${productId}`)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to remove item from wishlist");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            if (data.success) {
+              iconElement.innerHTML = "♡"; // Unicode character for white heart
+              iconElement.style.color = "white";
+            } else {
+              console.error("Failed to remove from wishlist:", data.error);
+            }
+          })
+          .catch((error) => {
+            console.error("Error removing item from wishlist:", error);
+          });
+      }
+
+      // Function to toggle wishlist status
+      function toggleWishlist(productId, iconElement) {
+        if (iconElement.innerHTML === "♡") {
+          addToWishlist(productId, iconElement);
+        } else {
+          removeFromWishlist(productId, iconElement);
+        }
+      }
+    </script>
+  </body>
+</html>
