@@ -47,6 +47,8 @@ https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/150340995
 
 
 
+https://github.com/ABHIJEET-KUMAR-XdYZg/Visual-AI-and-Ecommerce/assets/150340995/2a2e02eb-1dad-4c9e-bca3-9300c6462057
+
 
 
 
